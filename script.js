@@ -21,24 +21,35 @@ function makeGrid (manyGrid) {
     }
 }
 
-
 // Starting Grid
 const startGrid = makeGrid(defaultManyGrid);
 
 let hoverGrid = document.querySelectorAll(".Grid");
 hoverGrid.forEach(grid => {
+    colorPick = "#000000";
+
     grid.addEventListener("mouseover", () => {
-        grid.style.backgroundColor = 'lightblue';
+        grid.style.backgroundColor = colorPick;
+
+        if (grid.style.opacity <= 0.8) {
+            grid.style.opacity = +grid.style.opacity + 0.2;
+            // +e.style.opacity to convert opacity from string to number
+        }
     });
     grid.addEventListener("mouseleave", () => {
-        grid.style.backgroundColor = 'lightblue';
+        grid.style.backgroundColor = colorPick;
+
+        if (grid.style.opacity <= 0.8) {
+            grid.style.opacity = +grid.style.opacity + 0.2;
+            // +e.style.opacity to convert opacity from string to number
+        }
     });
 })
 
 // Changed Grid
 const resetBtn = document.querySelector("#btn");
 resetBtn.addEventListener("click", () => {
-    changedManyGrid = parseInt(prompt("Reset the grid (16 - 100)"));
+    changedManyGrid = parseInt(prompt("Reset the grid (16 - 100)", 16));
     const removeGrid = document.querySelectorAll(".Grid");
 
     removeGrid.forEach(grid => {
@@ -49,11 +60,23 @@ resetBtn.addEventListener("click", () => {
 
     let hoverGrid = document.querySelectorAll(".Grid");
     hoverGrid.forEach(grid => {
+        colorPick = "#000000";
+
         grid.addEventListener("mouseover", () => {
-            grid.style.backgroundColor = 'lightblue';
+            grid.style.backgroundColor = colorPick;
+
+            if (grid.style.opacity <= 0.8) {
+                grid.style.opacity = +grid.style.opacity + 0.2;
+                // +e.style.opacity to convert opacity from string to number
+            }
         });
         grid.addEventListener("mouseleave", () => {
-            grid.style.backgroundColor = 'lightblue';
+            grid.style.backgroundColor = colorPick;
+
+            if (grid.style.opacity <= 0.8) {
+                grid.style.opacity = +grid.style.opacity + 0.2;
+                // +e.style.opacity to convert opacity from string to number
+            }
         });
     })
 })
