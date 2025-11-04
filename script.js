@@ -11,8 +11,18 @@ for (i = 0; i < manyGrid; i++){
         grid.classList.add("Grid");
         grid.style.width = fixedSizeGrid + 'px';
         grid.style.height = fixedSizeGrid + 'px';
-        grid.style.border = '1px solid black'
+        grid.style.backgroundColor = 'white';
 
         containers.appendChild(grid);
     }
 }
+
+let hoverGrid = document.querySelectorAll(".Grid");
+hoverGrid.forEach(grid => {
+    grid.addEventListener("mouseover", () => {
+        grid.style.backgroundColor = 'lightblue';
+    });
+    grid.addEventListener("mouseleave", () => {
+        grid.style.backgroundColor = 'lightblue';
+    });
+})
