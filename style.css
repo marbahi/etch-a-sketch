@@ -1,12 +1,27 @@
+body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 15px;
+}
+
+#btn {
+    width: 66px;
+    height: 33px;
+    margin-bottom: 16px;
+    padding: 4px 8px;
+}
+
 #container {
     width: 800px;
     height: 800px;
     border: 1px solid black;
     display: flex;
     flex-wrap: wrap;
-    margin: auto;
+    flex-grow: 0;
+    flex-shrink: 0;
 }
 
 .Grid {
-    border: 1px solid black;
+    border: 1px solid gray;
 }
