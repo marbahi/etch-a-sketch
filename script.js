@@ -16,6 +16,16 @@ function makeGrid (manyGrid) {
             grid.style.height = fixedSizeGrid + 'px';
             grid.style.backgroundColor = 'white';
 
+            if(i === 0 && j === 0){
+                grid.style.borderRadius = '50% 0 0 0';
+            } else if (i === 0 && j === manyGrid - 1) {
+                grid.style.borderRadius = '0 50% 0 0';
+            } else if (i === manyGrid - 1 && j === 0) {
+                grid.style.borderRadius = '0 0 0 50%';
+            } else if (i === manyGrid - 1 && j === manyGrid - 1){
+                grid.style.borderRadius = '0 0 50% 0';
+            }
+
             containers.appendChild(grid);
         }
     }

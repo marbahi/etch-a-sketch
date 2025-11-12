@@ -3,6 +3,7 @@ body {
     align-items: center;
     flex-direction: column;
     margin: 15px;
+    background-color: palegreen;
 }
 
 #btn {
@@ -10,12 +11,17 @@ body {
     height: 33px;
     margin-bottom: 16px;
     padding: 4px 8px;
+    border-radius: 15%;
+    border: 0px;
+    background-color: darkgreen;
+    color: azure;
 }
 
 #container {
     width: 800px;
     height: 800px;
-    border: 1px solid black;
+    border: 0px solid black;
+    border-radius: 3%;
     display: flex;
     flex-wrap: wrap;
     flex-grow: 0;
